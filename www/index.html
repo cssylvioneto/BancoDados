@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+    <!--
+  * Please see the included README.md file for license terms and conditions.
+  -->
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+        <title>Blank App Designer Cordova Web App Project Template</title>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+        <!--
+  * The "meta viewport" tag (below) helps your app size appropriately to a device's ideal viewport.
+  * Note that Windows device viewports work better when initialized using the @viewport CSS rule.
+  * For a quick overview of "meta viewport" and @viewport, see this article:
+  *   http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag
+  * To see how it works, try your app on a real device with and without a "meta viewport" tag.
+  * Additional useful references include:
+  *   http://www.quirksmode.org/mobile/viewports.html
+  *   http://www.quirksmode.org/mobile/metaviewport/devices.html
+  *   https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html
+-->
+
+        <!-- <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1"> -->
+        <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, minimum-scale=1, maximum-scale=2"> -->
+
+        <style>
+            /* following three (cascaded) are equivalent to above three meta viewport statements */
+            /* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html */
+            /* see http://dev.w3.org/csswg/css-device-adapt/ */
+                @-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }          @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
+                @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }                   @viewport { user-zoom: fixed ; min-zoom: 100% ; }
+                /*@-ms-viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }   @viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }*/
+        </style>
+
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+
+        <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
+        <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work below -->
+        <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
+
+        <!-- Recommended location for your JavaScript libraries -->
+        <!-- These library references (below) are just examples to give you the general idea... -->
+        <!-- <script src="lib/mc/hammer.js"></script> -->
+        <!-- <script src="lib/ft/fastclick.js"></script> -->
+
+        <!--
+  * cordova.js is a phantom lib for "Cordova HTML5 web app," it does nothing in a "Standard HTML5 web app"
+  * Seeing a "Failed to load resource: net::ERR_FILE_NOT_FOUND" message caused by this "cordova.js" script?
+  * The cordova.js script is required if you convert your "Standard HTML5" project into a "Cordova" project.
+  * You can safely ignore the error or comment out this line if you will not be developing a Cordova app.
+-->
+        <script src="cordova.js" id="xdkJScordova_"></script>
+
+        <script src="js/app.js"></script>
+        <!-- for your event code, see README and file comments for details -->
+        <script src="js/init-app.js"></script>
+        <!-- for your init code, see README and file comments for details -->
+        <script src="xdk/init-dev.js"></script>
+        <!-- normalizes device and document ready events, see file for details -->
+        <script type="application/javascript" src="lib/jquery.min.js"></script>
+        <script type="application/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+        <script type="application/javascript" src="xdk/ad/bs_subpage.js"></script>
+        <script type="application/javascript" src="marginal/marginal-position.min.js"></script>
+        <script type="application/javascript" src="js/funtion.js"></script>
+        <script type="application/javascript" src="js/index_user_scripts.js"></script>
+        <script type="application/javascript" src="js/dati.js"></script>
+        <script>
+            dati.initialize(function(status){                
+                    if(status==false){
+                        alert("Não foi possivel se conectar");
+                    }
+                
+            });
+        </script>
+        <script type="application/javascript" src="sidebar/js/hammer.js"></script>
+        <script type="application/javascript" src="sidebar/js/jquery.hammer.js"></script>
+        <script type="application/javascript" src="sidebar/js/swipe-hammer.js"></script>
+        <script type="application/javascript" src="sidebar/js/sidebar.js"></script>
+        <script type="application/javascript" src="js/push.js"></script>
+    </head>
+
+    <body>
+        <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
+        <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work above -->
+        <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
+        <div class="upage vertical-col left" id="mainpage">
+            <div class="widget uib_w_4 scale-image d-margins" data-uib="media/img" data-ver="0">
+                <figure class="figure-align">
+                    <img src="images/Arrow.png">
+                    <figcaption data-position="bottom"></figcaption>
+                </figure>
+            </div>
+            <div class="list-group widget uib_w_1 d-margins" data-uib="twitter%20bootstrap/list_group" data-ver="1"><a class="list-group-item allow-badge widget uib_w_2" data-uib="twitter%20bootstrap/list_item" data-ver="1"><span class="badge"> </span>
+   
+   <p class="list-group-item-text">Cadastrar clientes</p>
+</a><a class="list-group-item allow-badge widget uib_w_3" data-uib="twitter%20bootstrap/list_item" data-ver="1"><span class="badge"> </span>
+   
+   <p class="list-group-item-text">Relatório</p>
+</a>
+            </div>
+
+        </div>
+        <div class="upage hidden" id="detalhe">
+            <div class="upage-outer">
+                <div class="upage-content ac0 content-area vertical-col left" id="page_30_2">
+                    <div class="btn-group uib-bs-flex widget uib_w_31 d-margins" data-uib="twitter%20bootstrap/button_group" data-ver="1">
+                        <button class="btn widget uib_w_32 btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnVoltarDetalhe"><i class="glyphicon glyphicon-chevron-left" data-position="icon only"></i>
+                        </button>
+                        <button class="btn widget uib_w_33 btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnApagarDetalhe"><i class="glyphicon glyphicon-trash" data-position="icon only"></i>
+                        </button>
+                        <button class="btn widget uib_w_34 btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnAtualizarDetalhe"><i class="glyphicon glyphicon-refresh" data-position="icon only"></i>
+                        </button>
+                    </div>
+
+                    <div class="tarea widget uib_w_15 d-margins" data-uib="media/text" data-ver="0" name="uib_w_15" id="lblCodigo">
+                        <div class="widget-container left-receptacle"></div>
+                        <div class="widget-container right-receptacle"></div>
+                        <div class="text-container">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                    </div>
+                    <div class="tarea widget uib_w_16 d-margins" data-uib="media/text" data-ver="0" name="uib_w_16" id="lblNome">
+                        <div class="widget-container left-receptacle"></div>
+                        <div class="widget-container right-receptacle"></div>
+                        <div class="text-container">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                    </div>
+                    <div class="tarea widget uib_w_17 d-margins" data-uib="media/text" data-ver="0" name="uib_w_17" id="lblEmail">
+                        <div class="widget-container left-receptacle"></div>
+                        <div class="widget-container right-receptacle"></div>
+                        <div class="text-container">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                    </div>
+
+                    <div class="tarea widget uib_w_43 d-margins" data-uib="media/text" data-ver="0" name="uib_w_43" id="lblTelefone">
+                        <div class="widget-container left-receptacle"></div>
+                        <div class="widget-container right-receptacle"></div>
+                        <div class="text-container">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                    </div>
+                    <div class="tarea widget uib_w_44 d-margins" data-uib="media/text" data-ver="0" name="uib_w_44" id="lblIdade">
+                        <div class="widget-container left-receptacle"></div>
+                        <div class="widget-container right-receptacle"></div>
+                        <div class="text-container">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                    </div>
+                    <div class="tarea widget uib_w_45 d-margins" data-uib="media/text" data-ver="0" name="uib_w_45" id="lblSexo">
+                        <div class="widget-container left-receptacle"></div>
+                        <div class="widget-container right-receptacle"></div>
+                        <div class="text-container">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="upage vertical-col left hidden" id="relatorio">
+            <button class="btn widget uib_w_46 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnVoltarRelatorio"><i class="glyphicon glyphicon-chevron-left button-icon-left" data-position="left"></i>
+            </button>
+
+            <div class="list-group widget uib_w_21 d-margins" data-uib="twitter%20bootstrap/list_group" data-ver="1" id="lista">
+                <a class="list-group-item allow-badge widget uib_w_24" data-uib="twitter%20bootstrap/list_item" data-ver="1">
+                    <h4 class="list-group-item-heading">Heading</h4>
+                    <p class="list-group-item-text">List item</p>
+                </a>
+            </div>
+        </div>
+        <div class="upage hidden" id="cadastro">
+            <div class="upage-outer">
+                <div class="uib-header header-bg container-group inner-element uib_w_19" data-uib="layout/header" data-ver="0">
+                    <h2></h2>
+                    <div class="widget-container wrapping-col single-centered"></div>
+                    <div class="widget-container content-area horiz-area wrapping-col left">
+                        <button class="btn widget uib_w_20 d-margins btn-link" data-uib="twitter%20bootstrap/button" data-ver="1" id="voltarCadastro"><i class="glyphicon glyphicon-chevron-left button-icon-left" data-position="left"></i> 
+                        </button>
+                    </div>
+                    <div class="widget-container content-area horiz-area wrapping-col right"></div>
+                </div>
+                <div class="upage-content ac0 content-area vertical-col left" id="page_88_29">
+
+                    <div class="tarea widget uib_w_7 d-margins" data-uib="media/text" data-ver="0" name="uib_w_7">
+                        <div class="widget-container left-receptacle"></div>
+                        <div class="widget-container right-receptacle"></div>
+                        <div class="text-container">
+                            <h2 style="font-style:italic">Dados Pessoais</h2>
+                        </div>
+                    </div>
+                    <div class="table-thing widget uib_w_6 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
+                        <label class="narrow-control" for="txtNome"></label>
+                        <input class="wide-control form-control default" type="text" placeholder="Nome" id="txtNome">
+                    </div>
+                    <div class="table-thing widget uib_w_8 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
+                        <label class="narrow-control" for="txtIdade"></label>
+                        <input class="wide-control form-control default" type="number" placeholder="Idade" id="txtIdade">
+                    </div>
+                    <div class="table-thing widget uib_w_9 d-margins" data-uib="twitter%20bootstrap/select" data-ver="1">
+                        <label class="narrow-control"></label>
+                        <select class="wide-control form-control default" id="txtSexo">
+                            <option>Sexo</option>
+                            <option>Feminino</option>
+                            <option>Masculino</option>
+                        </select>
+                    </div>
+                    <div class="tarea widget uib_w_10 d-margins" data-uib="media/text" data-ver="0" name="uib_w_10">
+                        <div class="widget-container left-receptacle"></div>
+                        <div class="widget-container right-receptacle"></div>
+                        <div class="text-container">
+                            <h2 style="font-style:italic;">Dados Contato</h2>
+                        </div>
+                    </div>
+                    <div class="table-thing widget uib_w_11 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
+                        <label class="narrow-control" for="txtEmail"></label>
+                        <input class="wide-control form-control default" type="email" placeholder="Email" id="txtEmail">
+                    </div>
+                    <div class="table-thing widget uib_w_12 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
+                        <label class="narrow-control" for="txtTelefone"></label>
+                        <input class="wide-control form-control default" type="tel" placeholder="Telefone" id="txtTelefone">
+                    </div>
+                    <button class="btn widget uib_w_18 d-margins btn-success" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnCadastrar"><i class="glyphicon glyphicon-ok" data-position="icon only"></i>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+        <div class="upage vertical-col left hidden" id="atualizar">
+            <button class="btn widget uib_w_40 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnVoltarAtualizar"><i class="glyphicon glyphicon-chevron-left button-icon-left" data-position="left"></i>
+            </button>
+            <div class="table-thing widget uib_w_35 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
+                <label class="narrow-control" for="txtNomeAtualizar"></label>
+                <input class="wide-control form-control default" type="text" placeholder="Nome" id="txtNomeAtualizar">
+            </div>
+            <div class="table-thing widget uib_w_36 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
+                <label class="narrow-control" for="txtIdadeAtualizar"></label>
+                <input class="wide-control form-control default" type="number" placeholder="Idade" id="txtIdadeAtualizar">
+            </div>
+            <div class="table-thing widget uib_w_41 d-margins" data-uib="twitter%20bootstrap/select" data-ver="1">
+                <label class="narrow-control"></label>
+                <select class="wide-control form-control default" id="cmbSexoAtualizar">
+                    <option>Sexo</option>
+                    <option>Masculino</option>
+                    <option>Feminino</option>
+                </select>
+            </div>
+            <div class="table-thing widget uib_w_38 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
+                <label class="narrow-control" for="txtEmailAtualizar"></label>
+                <input class="wide-control form-control default" type="email" placeholder="Email" id="txtEmailAtualizar">
+            </div>
+            <div class="table-thing widget uib_w_39 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
+                <label class="narrow-control" for="txtTelefoneAtualizar"></label>
+                <input class="wide-control form-control default" type="tel" placeholder="Telefone" id="txtTelefoneAtualizar">
+            </div>
+            <button class="btn widget uib_w_42 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnAtualizar"><i class="glyphicon glyphicon-ok" data-position="icon only"></i>
+            </button>
+        </div>
+
+    </body>
+
+</html>
